@@ -1,0 +1,26 @@
+{
+  "name": "api_coding_challenge",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^0.8.0",
+    "body-parser": "~1.8.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "ejs": "~0.8.5",
+    "express": "~4.9.0",
+    "express-session": "^1.9.1",
+    "morgan": "~1.3.0",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "request": "^2.47.0",
+    "sequelize": "^2.0.0-rc1",
+    "sequelize-cli": "^0.3.3",
+    "serve-favicon": "~2.1.3",
+    "sqlite3": "^3.0.2"
+  }
+}

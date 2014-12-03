@@ -1,0 +1,165 @@
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Carlos Alvarez - Alvarez.is">
+
+    <!-- Le styles -->
+    <link href="../stylesheets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../stylesheets/home_stylesheets/main.css" rel="stylesheet">
+    <link href="../stylesheets/home_stylesheets/font-style.css" rel="stylesheet">
+    <link href="../stylesheets/home_stylesheets/flexslider.css" rel="stylesheet">
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src='https://connect.humanapi.co/connect.js'></script>
+  <script src='/javascripts/human-api-options-new.js'></script>
+  <script src='/javascripts/human-api-options-existing.js'></script>
+  <script src="/javascripts/chart.js"></script>
+  <script src="/javascripts/home-ajax-calls.js"></script>
+  <script type="text/javascript" src="/javascripts/home.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Google Fonts call. Font Used Open Sans & Raleway -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+<script type="text/javascript">
+ $(window).load(function(){
+
+    $('.flexslider').flexslider({
+        animation: "slide",
+        slideshow: true,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+    });
+});
+</script>
+
+
+
+  </head>
+  <body>
+
+    <!-- NAVIGATION MENU -->
+
+    <div class="navbar-nav navbar-inverse navbar-fixed-top">
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Stay Fit - <%= email %></a>
+        </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li id="connect"><a href="#"><i class="icon-folder-open icon-white"></i>Connect Health Data</a></li>
+              <li><a href="/logout"><i class="icon-calendar icon-white"></i>Log Out</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    <div class="container">
+
+    <!-- FIRST ROW OF BLOCKS -->
+      <div class="row">
+
+
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Running/Walking: <span class="blue">Distance </span> <span class="green">Calories</span></dtitle>
+            <hr>
+            <canvas id="activities" width="250" height="250"></canvas>
+        </div>
+        </div>
+
+      <!-- DONUT CHART BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+          <dtitle>Weight: KG  </dtitle>
+          <hr>
+          <canvas id="weight" width="250" height="250"></canvas>
+      </div>
+        </div>
+
+      <!-- DONUT CHART BLOCK -->
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+          <dtitle>Body Fat %</dtitle>
+          <hr>
+          <canvas id="body-fat" width="250" height="250"></canvas>
+      </div>
+        </div>
+
+        <div class="col-sm-3 col-lg-3">
+
+      <!-- LOCAL TIME BLOCK -->
+          <div class="half-unit">
+            <dtitle>Current Weight</dtitle>
+            <hr>
+            <h1 id="weight-single"></h1>
+      </div>
+
+      <!-- SERVER UPTIME -->
+      <div class="half-unit">
+            <dtitle>Height</dtitle>
+            <hr>
+            <h1 id="height"></h1>
+      </div>
+
+        </div>
+      </div>
+
+
+    <!-- SECOND ROW OF BLOCKS -->
+      <div class="row pie">
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+          <dtitle>Current Body Fat %</dtitle>
+          <hr>
+          <canvas id="not-fat" width="220" height="220"></canvas>
+    </div>
+    </div>
+
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+          <dtitle>Blood Pressure <span class="blue">Systolic </span> <span class="green">Diastolic</span></dtitle>
+          <hr>
+          <canvas id="blood-pressure" width="250" height="250"></canvas>
+      </div>
+        </div>
+
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Heart Rate Readings: BPM</dtitle>
+            <hr>
+            <canvas id="heart-rate" width="250" height="250"></canvas>
+      </div>
+        </div>
+
+        <div class="col-sm-3 col-lg-3">
+          <div class="dash-unit">
+            <dtitle>Random Quote - To Make You Think & Maybe be Inspired</dtitle>
+            <hr>
+            <iframe width="230"
+              height="165"
+              frameborder="0"
+              scrolling="no"
+              src="http://iheartquotes.com/api/v1/random?format=html&max_lines=4&max_characters=320&width=225&height=165">
+            <a href="http://iheartquotes.com/fortune/random">Random Quote</a>
+            </iframe>
+      </div>
+        </div>
+      </div><!-- /row -->
+
+</body></html>
